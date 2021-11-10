@@ -59,20 +59,31 @@ body {
 
 .button {
    position: absolute;
-   right: 20px;
+
    top: 20px;
    width: 40px;
    height: 40px;
    background-color: wheat;
-   background-image: url("../src/Delete.png");
+
    background-position: center center;
    background-size: 30px 30px;
    background-repeat: no-repeat;
    cursor: pointer;
 }
 
+.button_delete {
+   right: 20px;
+   background-image: url("../src/Delete.png");
+}
+
+.button_edit {
+   right: 80px;
+   background-image: url("../src/edit.png");
+}
+
 @media screen and (min-width: 768px) {
-   .button_delete {
+   .button_delete,
+   .button_edit {
       display: none;
    }
 
@@ -85,7 +96,8 @@ body {
       gap: 20px;
    }
 
-   .kitty:hover .button_delete {
+   .kitty:hover .button_delete,
+   .kitty:hover .button_edit {
       display: block;
    }
 }
